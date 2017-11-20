@@ -6,7 +6,7 @@ It is difficult to model probability. Consider medical diagnosis. There are thou
 
 <table class="image">
 <caption align="bottom"><a href="https://www.amazon.com/Probabilistic-Graphical-Models-Principles-Computation/dp/0262013193/ref=sr_1_1?ie=UTF8&qid=1511220417&sr=8-1&keywords=probabilistic+graphical+models">Probabilistic Graphical Models</a></caption>
-<tr><td><img src="../images/PGM_cover.jpg"></td></tr>
+<tr><td><img src="../images/pgm_cover.jpg"></td></tr>
 </table>
 
 I personally recommend this book for anyone with interest in machine learning. The book makes you think critically about the capacity and expressive power of different variants of graphical models. It is an introductory graduate level textbook (I can only do around half the problems myself) and is a bit tedious with its insistance on proving the soundness and completeness of all properties. These notes are meant primarily for myself, but I thought it might help for anyone who is considering buying the book themselves or just want to taste test PGMs. Enjoy!  
