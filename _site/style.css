@@ -156,6 +156,11 @@ img {
   max-width: 100%;
 }
 
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .gmnoprint img {
   max-width: none;
 }
