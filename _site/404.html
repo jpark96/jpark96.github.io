@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>404: Page not found – Jin Park – Berkeley Bear's Blog for Machine Learning, Photography, and Life</title>
+    <title>404: Page not found – jspark – ML researcher and tinkerer</title>
 
         <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,10 +9,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="Berkeley Bear's Blog for Machine Learning, Photography, and Life">
-    <meta property="og:description" content="Berkeley Bear's Blog for Machine Learning, Photography, and Life" />
+    <meta name="description" content="ML researcher and tinkerer">
+    <meta property="og:description" content="ML researcher and tinkerer" />
     
-    <meta name="author" content="Jin Park" />
+    <meta name="author" content="jspark" />
 
     
     <meta property="og:title" content="404: Page not found" />
@@ -23,8 +23,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="Jin Park - Berkeley Bear's Blog for Machine Learning, Photography, and Life" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="jspark - ML researcher and tinkerer" href="/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 
@@ -42,6 +41,9 @@
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+    
+    <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
 
   <body>
@@ -53,7 +55,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>Berkeley Bear's Blog for Machine Learning, Photography, and Life</p>
+    <p>ML researcher and tinkerer</p>
   </div>
 
   <nav class="sidebar-item sidebar-nav">
@@ -100,22 +102,23 @@
 
 
   <div class="wrap">
-    <div class="wrapper-masthead">
-      <div class="container">
+    <div class="wrapper-masthead id="myHeader"">
+      <div class="container-lg">
         <header class="masthead clearfix">
-	  <a href="/" class="site-avatar"><img src="../images/logo.png" / style=></a>
-
-        <span>
-          <h3 class="masthead-title">
-            <a href="/about">jspark</a>
-            <small>Berkeley Bear's Blog for Machine Learning, Photography, and Life</small>
-          </h3>
-        </span>
+          <div class="container">
+            <a href="/" class="site-avatar"><img src="../images/logo.png" / style=></a>
+              <span>
+                <h3 class="masthead-title">
+                  <a href="/about">jspark</a>
+                  <small>ML researcher and tinkerer</small>
+                </h3>
+              </span>
+          </div>
         </header>
       </div>
     </div>
 
-    <div id="main" role="main" class="container">
+    <div id="main" role="main" class="container content">
       <div class="page">
   <h1 class="page-title">404: Page not found</h1>
   <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/">Head back home</a> to try finding it again.</p>
@@ -151,6 +154,7 @@
 
   </body>
     <script>
+      // Sidebar Functionality
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
@@ -166,5 +170,24 @@
           checkbox.checked = false;
         }, false);
       })(document);
+
+      // Scrolling Header
+      // When the user scrolls the page, execute myFunction 
+      window.onscroll = function() {myFunction()};
+
+      // Get the header
+      var header = document.getElementById("myHeader");
+
+      // Get the offset position of the navbar
+      var sticky = header.offsetTop;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
     </script>
 </html>

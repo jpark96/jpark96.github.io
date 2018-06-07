@@ -9,7 +9,6 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
@@ -28,6 +27,9 @@
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+    
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   </head>
 
   <body>
@@ -35,22 +37,23 @@
     {% include sidebar.html %}
 
   <div class="wrap">
-    <div class="wrapper-masthead">
-      <div class="container">
+    <div class="wrapper-masthead id="myHeader"">
+      <div class="container-lg">
         <header class="masthead clearfix">
-	  <a href="{{ site.baseurl }}/" class="site-avatar"><img src="../images/logo.png" / style=></a>
-
-        <span>
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/about">jspark</a>
-            <small>{{ site.description }}</small>
-          </h3>
-        </span>
+          <div class="container">
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="../images/logo.png" / style=></a>
+              <span>
+                <h3 class="masthead-title">
+                  <a href="{{ site.baseurl }}/about">jspark</a>
+                  <small>{{ site.description }}</small>
+                </h3>
+              </span>
+          </div>
         </header>
       </div>
     </div>
 
-    <div id="main" role="main" class="container">
+    <div id="main" role="main" class="container content">
       {{ content }}
     </div>
 
@@ -69,6 +72,7 @@
 
   </body>
     <script>
+      // Sidebar Functionality
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
@@ -84,5 +88,24 @@
           checkbox.checked = false;
         }, false);
       })(document);
+
+      // Scrolling Header
+      // When the user scrolls the page, execute myFunction 
+      window.onscroll = function() {myFunction()};
+
+      // Get the header
+      var header = document.getElementById("myHeader");
+
+      // Get the offset position of the navbar
+      var sticky = header.offsetTop;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
     </script>
 </html>
