@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Projects
-permalink: /projects/
+title: About
+permalink: /about/
 ---
 
 See <a href="https://www.linkedin.com/in/jinspark621/">linkedin</a> for professional portfolio.
